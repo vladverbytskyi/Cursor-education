@@ -1,4 +1,4 @@
-package task3;
+package com.cursor.hw9.task3;
 
 public class Rethrowing {
     public void someFirstMethod() throws Exception {
