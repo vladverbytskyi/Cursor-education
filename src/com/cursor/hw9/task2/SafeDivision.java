@@ -1,12 +1,12 @@
-package task2;
+package com.cursor.hw9.task2;
 
 import java.util.Scanner;
 
 public class SafeDivision {
 
     private Scanner scanner = new Scanner(System.in);
-    double firstNumber;
-    double lastNumber;
+    private double firstNumber;
+    private double lastNumber;
 
     public void setNumbers() {
         System.out.println("Enter your fist number: ");
@@ -17,7 +17,7 @@ public class SafeDivision {
 
     public void division() {
         setNumbers();
-        try {
+        try (Scanner scanner = new Scanner(System.in)) {
             double result = firstNumber / lastNumber;
             System.out.println("Result by divide: " + result);
             if (lastNumber == 0) {
@@ -29,8 +29,6 @@ public class SafeDivision {
             lastNumber = scanner.nextDouble();
             System.out.println("Result by divide: " + (firstNumber / lastNumber));
             division();
-        } finally {
-            scanner.close();
         }
     }
 }
