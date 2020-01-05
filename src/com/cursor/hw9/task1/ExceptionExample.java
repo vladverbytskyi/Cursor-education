@@ -1,4 +1,4 @@
-package task1;
+package com.cursor.hw9.task1;
 
 import java.io.IOException;
 
@@ -11,18 +11,18 @@ public class ExceptionExample {
         }
     }
 
-    public void catchExceptionA() {
+    public void catchTypeNotPresentException() {
         try {
-            throw new ExceptionA();
-        } catch (ExceptionA exceptionA) {
-            exceptionA.printStackTrace();
+            throw new TypeNotPresentException();
+        } catch (TypeNotPresentException typeNotPresentException) {
+            typeNotPresentException.printStackTrace();
         }
     }
 
-    public void catchExceptionB() {
+    public void catchNulCloneableException() {
         try {
-            throw new ExceptionB();
-        } catch (ExceptionB exceptionB) {
+            throw new NulCloneableException();
+        } catch (NulCloneableException exceptionB) {
             exceptionB.printStackTrace();
         }
     }
