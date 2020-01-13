@@ -1,40 +1,41 @@
-package task3;
+package com.cursor.hw6.task3;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ElementChecker {
-    public void checkElement() {
-        List<Integer> list1 = new ArrayList<>();
-        List<Integer> list2 = new ArrayList<>();
+    List<Integer> firstList = new ArrayList<>();
+    List<Integer> secondList = new ArrayList<>();
 
-        list1.add(2);
-        list1.add(5);
-        list1.add(11);
-        list1.add(15);
-        list1.add(564);
-        list1.add(784);
-        list1.add(864);
+    public void addElement() {
+        firstList.add(2);
+        firstList.add(5);
+        firstList.add(11);
+        firstList.add(15);
+        firstList.add(564);
+        firstList.add(784);
+        firstList.add(864);
 
-        list2.add(18);
-        list2.add(321);
-        list2.add(148);
-        list2.add(2);
-        list2.add(5615);
-        list2.add(15);
-        list2.add(185);
+        secondList.add(18);
+        secondList.add(321);
+        secondList.add(148);
+        secondList.add(2);
+        secondList.add(5615);
+        secondList.add(15);
+        secondList.add(185);
 
-        System.out.println("List 1 contains: " + list1);
-        System.out.println("List 2 contains: " + list2);
+        System.out.println("List 1 contains: " + firstList);
+        System.out.println("List 2 contains: " + secondList);
+        checkElement();
+     }
 
-        for (Integer integer : list1) {
-            for (Integer value : list2) {
-                if (integer.equals(value)) {
-                    System.out.println("Similar element: " + integer);
-                }
-            }
-        }
-
-
+     void checkElement(){
+         for (Integer integer : firstList) {
+             for (Integer value : secondList) {
+                 if (integer.equals(value)) {
+                     System.out.println("Similar element: " + integer);
+                 }
+             }
+         }
      }
 }
