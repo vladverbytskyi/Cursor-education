@@ -20,7 +20,7 @@ public class AppExecutor {
 
         //task3
         try {
-            new Rethrowing().someFirstMethod();
+            new Rethrowing().throwArithmeticExceptionMethodSecond();
         } catch (Exception exception) {
             exception.printStackTrace();
         }
