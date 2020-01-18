@@ -14,10 +14,9 @@ public class ListActions {
         list.add(20);
         list.add(22);
         System.out.println("List  before remove: " + list);
-        removeNumbers();
     }
 
-    void removeNumbers () {
+   public void removeNumbersDivisibleByThree() {
          list.removeIf(integer -> integer % 3 == 0);
          System.out.println("List  after remove: " + list);
     }

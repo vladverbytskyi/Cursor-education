@@ -6,10 +6,22 @@ import com.cursor.hw6.task3.ElementChecker;
 import com.cursor.hw6.task4.ValuesActions;
 
 public class AppExecutor {
+
+
     public static void runApp() {
-        new ListActions().addNumbers();
-        new Fruits().addFruits();
-        new ElementChecker().addElement();
-        new ValuesActions().sortElement();
+        ListActions listActions = new ListActions();
+        listActions.addNumbers();
+        listActions.removeNumbersDivisibleByThree();
+
+        Fruits fruits = new Fruits();
+        fruits.addFruits();
+        fruits.replaceFruits();
+
+        ElementChecker elementChecker = new ElementChecker();
+        elementChecker.addElement();
+        elementChecker.numListCheck();
+
+        ValuesActions valuesActions = new ValuesActions();
+        valuesActions.sortElement();
     }
 }

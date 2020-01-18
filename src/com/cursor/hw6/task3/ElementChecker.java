@@ -26,10 +26,9 @@ public class ElementChecker {
 
         System.out.println("List 1 contains: " + firstList);
         System.out.println("List 2 contains: " + secondList);
-        checkElement();
      }
 
-     void checkElement(){
+     public void numListCheck(){
          for (Integer integer : firstList) {
              for (Integer value : secondList) {
                  if (integer.equals(value)) {
